@@ -84,6 +84,24 @@ void calculateModule(const std::complex<double>* transform, unsigned int n, doub
     }
 }
 
+void calculateModule(const std::complex<float>* transform, unsigned int n, float* module){
+    for(size_t k=0; k<n; k++){
+        module[k] = std::abs(transform[k]);
+    }
+}
+
+void calculateArgument(const std::complex<double>* transform, unsigned int n, double* argument){
+    for(size_t k=0; k<n; k++){
+        argument[k] = std::arg(transform[k]);
+    }
+}
+
+void calculateArgument(const std::complex<float>* transform, unsigned int n, float* argument){
+    for(size_t k=0; k<n; k++){
+        argument[k] = std::arg(transform[k]);
+    }
+}
+
 void seeTransform(const std::complex<double>* transform, unsigned int n){
     for(size_t k=0; k<n; k++){
         std::cout << transform[k];

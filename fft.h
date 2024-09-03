@@ -10,7 +10,10 @@
     void calculateFFT(const std::complex<float>* signal, unsigned int length, std::complex<float>* transform);
     void seeTransform(const std::complex<double>* transform, unsigned int n);
     void seeTransform(const std::complex<float>* transform, unsigned int n);
-    void calculateModule(const std::complex<double>* transform, double* module);
+    void calculateModule(const std::complex<double>* transform, unsigned int n, double* module);
+    void calculateModule(const std::complex<float>* transform, unsigned int n, float* module);
+    void calculateArgument(const std::complex<double>* transform, unsigned int n, double* argument);
+    void calculateArgument(const std::complex<float>* transform, unsigned int n, float* argument);
 
     template<typename T1, typename T2>
     void fft(const T1* signal, unsigned int n, T2* transform){
