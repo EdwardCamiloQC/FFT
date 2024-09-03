@@ -4,12 +4,13 @@
     #include <complex>
     #include <iostream>
 
-    void calculeFFT(const double* signal, unsigned int length, std::complex<double>* transform);
-    void calculeFFT(const std::complex<double>* signal, unsigned int length, std::complex<double>* transform);
-    void calculeFFT(const float* signal, unsigned int length, std::complex<float>* transform);
-    void calculeFFT(const std::complex<float>* signal, unsigned int length, std::complex<float>* transform);
+    void calculateFFT(const double* signal, unsigned int length, std::complex<double>* transform);
+    void calculateFFT(const std::complex<double>* signal, unsigned int length, std::complex<double>* transform);
+    void calculateFFT(const float* signal, unsigned int length, std::complex<float>* transform);
+    void calculateFFT(const std::complex<float>* signal, unsigned int length, std::complex<float>* transform);
     void seeTransform(const std::complex<double>* transform, unsigned int n);
     void seeTransform(const std::complex<float>* transform, unsigned int n);
+    void calculateModule(const std::complex<double>* transform, double* module);
 
     template<typename T1, typename T2>
     void fft(const T1* signal, unsigned int n, T2* transform){
