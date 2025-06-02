@@ -2,10 +2,11 @@ FFT: Fast Fourier Transform
 
 La transformada rápida de fourier es un algoritmo que permite calcular la transformada discreta de fourier propia del espacio L2.
 
-Para calcular la FFT de un conjunto de datos unidimensional use la función fft(signal, n, transform), donde
-	- signal es un puntero referente al array al cual se quiere calcular la tranformada
-	- n es la longitud del array
-	- transform es el puntero que apunta al array donde se almacenara la transformada
+Para calcular la FFT de un conjunto de datos unidimensional use la función fft(signal, n, transform, normalize), donde:
+	- signal es un puntero referente al array al cual se quiere calcular la tranformada.
+	- n es la longitud del array.
+	- transform es el puntero que apunta al array donde se almacenara la transformada.
+	- normalize indica si el resultado es normalizado o no.
 Para ver el resultado puede usar la función showTransform(transform,n)
 
 Ejemplo1:
