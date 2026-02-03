@@ -98,7 +98,21 @@
     template<typename T>
     void seeTransform(const std::complex<T>* transform, unsigned int n){
         for(size_t k=0; k<n; k++){
-            std::cout << transform[k];
+            std::cout << transform[k] << std::endl;
+        }
+    }
+
+    template<typename T>
+    void seeModule(const T moduleSignal, unsigned int n){
+        for(unsigned int k=0; k<n; k++){
+            std::cout << moduleSignal[k] << std::endl;
+        }
+    }
+
+    template<typename T>
+    void seeArgument(const T argument, unsigned int n){
+        for(unsigned int k=0; k<n; k++){
+            std::cout << argument[k] << std::endl;
         }
     }
     
