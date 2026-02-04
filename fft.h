@@ -75,9 +75,7 @@
     template<typename T>
     void normalizeSignal(T *transform, unsigned int n){
         for(unsigned int i = 0; i < n; i++){
-            if(std::abs(transform[i]) != 0.0){
-                transform[i] = transform[i]/std::abs(transform[i]);
-            }
+                transform[i] = transform[i]/std::abs(std::complex<T>(n,0));
         }
     }
 
