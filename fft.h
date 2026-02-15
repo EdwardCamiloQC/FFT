@@ -47,11 +47,9 @@
             evenValues(signal, length, impar);
             calculateFFT(par, sizeof(par)/sizeof(std::complex<float>), oddTransform);
             calculateFFT(impar, sizeof(impar)/sizeof(std::complex<float>), evenTransform);
-            for(size_t k=0; k<length; k++){
-                if(k<length/2){
-                    transform[k] = oddTransform[k] + evenTransform[k] * std::polar<float>(1.0,-2.0*M_PI*k/length);
-                    transform[k+length/2] = oddTransform[k] - evenTransform[k] * std::polar<float>(1.0,-2.0*M_PI*k/length);
-                }
+            for(size_t k=0; k<length/2; k++){
+                transform[k] = oddTransform[k] + evenTransform[k] * std::polar<float>(1.0,-2.0*M_PI*k/length);
+                transform[k+length/2] = oddTransform[k] - evenTransform[k] * std::polar<float>(1.0,-2.0*M_PI*k/length);
             }
         }if(length==1){
             *transform = *signal;
