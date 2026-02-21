@@ -1,6 +1,6 @@
-<p>
+<h1>
 	FFT: Fast Fourier Transform
-</p>
+</h1>
 
 ## DESCRIPCIÓN
 La transformada rápida de fourier es un algoritmo que permite calcular la transformada discreta de fourier propia del espacio L2.
